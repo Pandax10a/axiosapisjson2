@@ -1,5 +1,11 @@
 // listening to an event of mouse click on button
-document.querySelector(`#for_axios`).addEventListener(`click`, list_ailments);
+document.querySelector(`#for_axios`).addEventListener(`click`, loading_wait);
+// set a timeout function to give a perceive loading delay
+function loading_wait (){
+    document.body[`outerHTML`] = `<h1> loading please wait... </h1>`;
+    setTimeout(list_ailments, 3000);
+    
+}
 
 // once click event is triggered, a request to api is sent
 function list_ailments(Ailments) {
